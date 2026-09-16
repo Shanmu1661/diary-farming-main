@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Registration & Free Trial | Daily Product</title>
+  <meta name="description" content="Register your household for farm fresh morning milk delivery in glass bottles. Claim your first 1-Litre bottle free trial with zero lock-in." />
+
+      <!-- Early Theme & Direction Bootstrap (Prevents FOUT / Flashing) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('dailyProductTheme');
+      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const savedDirection = localStorage.getItem('dailyProductDirection') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDirection);
+      if (savedDirection === 'rtl') {
+        document.documentElement.setAttribute('lang', 'ar');
+      }
+    })();
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-[#f8fafc] dark:bg-[#0b111e] text-slate-800 dark:text-slate-100 antialiased min-h-screen flex flex-col justify-between transition-colors duration-300">
+
+  <!-- Background Image: US Dairy Farm Sunrise (Subtle) -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <img
+      src="assets/images/hero/us-dairy-sunrise-barn.jpg"
+      alt="American dairy farm at sunrise"
+      class="w-full h-full object-cover object-center opacity-25 dark:opacity-15"
+    />
+    <div class="absolute inset-0 bg-slate-900/30 dark:bg-slate-950/70"></div>
+  </div>
+
+      <!-- ==========================================
+       TOP ANNOUNCEMENT / UTILITY BAR & MAIN NAVBAR
+       ========================================== -->
+  <header class="fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300">
+<<<<<<< HEAD
+    <!-- MAIN NAVBAR -->
+    <nav id="mainNavbar" class="bg-white dark:bg-[#131c2e] border-b border-slate-200 dark:border-slate-800 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-4 xl:px-8">
+        <div class="flex items-center justify-between h-16">
+          
+          <!-- Logo Area -->
+          <a href="index.html" class="flex items-center gap-2 xl:gap-2.5 group flex-shrink-0">
+            <div class="w-9 h-9 xl:w-10 xl:h-10 rounded-xl bg-gradient-to-tr from-blue-700 to-blue-500 text-white flex items-center justify-center shadow-md shadow-blue-600/30 group-hover:scale-105 transition duration-300">
+              <i class="fa-solid fa-cow text-lg xl:text-xl"></i>
+            </div>
+            <div>
+              <span class="text-lg xl:text-xl font-black tracking-tight text-slate-900 dark:text-white flex items-center">
+                Daily<span class="text-blue-600 dark:text-blue-400">Product</span>
+              </span>
+              <span class="block text-[8px] xl:text-[9px] font-bold tracking-wider text-blue-700 dark:text-blue-400 uppercase -mt-0.5">
+=======
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-blue-900 text-blue-100 text-xs py-2 px-4 border-b border-blue-800">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2 sm:gap-4 flex-wrap sm:flex-nowrap">
+          <span class="inline-flex items-center gap-1.5 font-medium whitespace-nowrap">
+            <i class="fa-solid fa-truck-fast text-blue-400"></i> Morning Delivery Window: <strong>5:30 AM – 7:30 AM</strong>
+          </span>
+          <span class="hidden md:inline text-blue-400">|</span>
+          <span class="hidden md:inline-flex items-center gap-1.5 font-medium whitespace-nowrap">
+            <i class="fa-solid fa-phone-volume text-blue-400"></i> Pure Milk Hotline: <strong>+1 (800) 456-MILK</strong>
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- Dark Mode Switcher -->
+          <button class="theme-toggle-btn px-2.5 py-1 rounded bg-blue-800 hover:bg-blue-700 text-white font-semibold transition flex items-center gap-1" title="Toggle Dark/Light Mode">
+            <i class="theme-toggle-icon fa-solid fa-moon"></i>
+          </button>
+          <!-- RTL / LTR Direction Toggle -->
+          <button class="rtl-toggle-btn px-2.5 py-1 rounded bg-blue-800 hover:bg-blue-700 text-white font-semibold transition flex items-center gap-1 text-xs" title="Switch Text Direction (LTR / RTL)">
+            <i class="fa-solid fa-right-left text-[10px]"></i>
+            <span class="rtl-btn-text uppercase font-bold">RTL</span>
+          </button>
+
+          <span class="text-blue-700">|</span>
+
+          <a href="login.html" class="inline-flex items-center gap-1 px-3 py-1 rounded bg-blue-700 hover:bg-blue-600 text-white font-bold transition flex-shrink-0">
+            <i class="fa-solid fa-user-lock text-[11px]"></i> Login Portal
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <nav id="mainNavbar" class="bg-white dark:bg-[#131c2e] border-b border-slate-200 dark:border-slate-800 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Logo Area -->
+          <a href="index.html" class="flex items-center gap-2.5 xl:gap-3 group flex-shrink-0">
+            <div class="w-10 h-10 xl:w-11 xl:h-11 rounded-2xl bg-gradient-to-tr from-blue-700 to-blue-500 text-white flex items-center justify-center shadow-lg shadow-blue-600/30 group-hover:scale-105 transition duration-300">
+              <i class="fa-solid fa-cow text-xl xl:text-2xl"></i>
+            </div>
+            <div>
+              <span class="text-xl xl:text-2xl font-black tracking-tight text-slate-900 dark:text-white flex items-center">
+                Daily<span class="text-blue-600 dark:text-blue-400">Product</span>
+              </span>
+              <span class="block text-[9px] xl:text-[10px] font-bold tracking-wider text-blue-700 dark:text-blue-400 uppercase -mt-1">
+>>>>>>> origin/main
+                Farm Fresh Dairy Service
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+<<<<<<< HEAD
+          <div class="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5 whitespace-nowrap">
+            <!-- Home Dropdown -->
+            <div class="relative group">
+              <a href="index.html" class="text-[11px] xl:text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-1.5 xl:px-2.5 py-1.5 xl:py-2 rounded-lg header-nav-link whitespace-nowrap transition flex items-center gap-1">
+=======
+          <div class="hidden lg:flex items-center space-x-0.5 xl:space-x-1.5 2xl:space-x-2 whitespace-nowrap">
+            <!-- Home Dropdown -->
+            <div class="relative group">
+              <a href="index.html" class="text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 xl:px-3 py-2 rounded-lg header-nav-link whitespace-nowrap transition flex items-center gap-1">
+>>>>>>> origin/main
+                Home <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition"></i>
+              </a>
+              <div class="absolute top-full left-0 hidden group-hover:block w-48 bg-white dark:bg-slate-900 shadow-xl rounded-xl border border-slate-100 dark:border-slate-800 py-2 z-50">
+                <a href="index.html" class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800">Home 1: Fresh Delivery</a>
+                <a href="home-2.html" class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800">Home 2: Tech & B2B Supply</a>
+              </div>
+            </div>
+
+<<<<<<< HEAD
+            <a href="about.html" class="text-[11px] xl:text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-1.5 xl:px-2.5 py-1.5 xl:py-2 rounded-lg header-nav-link whitespace-nowrap transition">About</a>
+
+            <!-- Services Dropdown -->
+            <div class="relative group">
+              <a href="services.html" class="text-[11px] xl:text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-1.5 xl:px-2.5 py-1.5 xl:py-2 rounded-lg header-nav-link whitespace-nowrap transition flex items-center gap-1">
+=======
+            <a href="about.html" class="text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 xl:px-3 py-2 rounded-lg header-nav-link whitespace-nowrap transition">About</a>
+
+            <!-- Services Dropdown -->
+            <div class="relative group">
+              <a href="services.html" class="text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 xl:px-3 py-2 rounded-lg header-nav-link whitespace-nowrap transition flex items-center gap-1">
+>>>>>>> origin/main
+                Services <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition"></i>
+              </a>
+              <div class="absolute top-full left-0 hidden group-hover:block w-52 bg-white dark:bg-slate-900 shadow-xl rounded-xl border border-slate-100 dark:border-slate-800 py-2 z-50">
+                <a href="services.html" class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800">All Dairy Services</a>
+                <a href="service-details.html" class="block px-4 py-2 text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800">Morning Milk Delivery</a>
+              </div>
+            </div>
+
+<<<<<<< HEAD
+            <a href="products.html" class="text-[11px] xl:text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-1.5 xl:px-2.5 py-1.5 xl:py-2 rounded-lg header-nav-link whitespace-nowrap transition">Products</a>
+            <a href="subscriptions.html" class="text-[11px] xl:text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-1.5 xl:px-2.5 py-1.5 xl:py-2 rounded-lg header-nav-link whitespace-nowrap transition">Subscriptions</a>
+            <a href="farm-story.html" class="text-[11px] xl:text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-1.5 xl:px-2.5 py-1.5 xl:py-2 rounded-lg header-nav-link whitespace-nowrap transition">Farm Story</a>
+            <a href="pricing.html" class="text-[11px] xl:text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-1.5 xl:px-2.5 py-1.5 xl:py-2 rounded-lg header-nav-link whitespace-nowrap transition">Pricing</a>
+            <a href="blog.html" class="text-[11px] xl:text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-1.5 xl:px-2.5 py-1.5 xl:py-2 rounded-lg header-nav-link whitespace-nowrap transition">Blog</a>
+            <a href="contact.html" class="text-[11px] xl:text-xs 2xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-1.5 xl:px-2.5 py-1.5 xl:py-2 rounded-lg header-nav-link whitespace-nowrap transition">Contact</a>
+          </div>
+
+          <!-- Header Right Actions: Dark Mode, RTL, Login Portal & Subscriber Dashboard -->
+          <div class="hidden sm:flex items-center gap-1.5 xl:gap-2 flex-shrink-0">
+            <!-- Theme & RTL Controls -->
+            <div class="flex items-center gap-1.5">
+              <!-- Dark Mode Switcher -->
+              <button class="theme-toggle-btn px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold transition flex items-center justify-center text-xs shadow-sm" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+                <i class="theme-toggle-icon fa-solid fa-moon"></i>
+              </button>
+              <!-- RTL / LTR Direction Toggle -->
+              <button class="rtl-toggle-btn px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-semibold transition flex items-center gap-1 text-xs shadow-sm" title="Switch Text Direction (LTR / RTL)">
+                <i class="fa-solid fa-right-left text-[10px] text-blue-600 dark:text-blue-400"></i>
+                <span class="rtl-btn-text uppercase font-bold text-[10px]">RTL</span>
+              </button>
+            </div>
+
+            <span class="text-slate-300 dark:text-slate-700 mx-0.5">|</span>
+
+            <!-- Login Portal -->
+            <a href="login.html" class="inline-flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/60 hover:bg-blue-100 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800/80 font-bold text-xs transition flex-shrink-0">
+              <i class="fa-solid fa-user-lock text-[11px]"></i>
+              <span>Login</span><span class="hidden xl:inline"> Portal</span>
+            </a>
+
+            <!-- Subscriber Dashboard CTA -->
+            <a href="dashboard.html" class="inline-flex items-center gap-1.5 xl:gap-2 px-2.5 xl:px-3.5 py-1.5 xl:py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-extrabold shadow-md shadow-blue-600/25 transition whitespace-nowrap flex-shrink-0">
+              <i class="fa-solid fa-gauge-high"></i>
+              <span class="hidden xl:inline">Subscriber </span><span>Dashboard</span>
+=======
+            <a href="products.html" class="text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 xl:px-3 py-2 rounded-lg header-nav-link whitespace-nowrap transition">Products</a>
+            <a href="subscriptions.html" class="text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 xl:px-3 py-2 rounded-lg header-nav-link whitespace-nowrap transition">Subscriptions</a>
+            <a href="farm-story.html" class="text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 xl:px-3 py-2 rounded-lg header-nav-link whitespace-nowrap transition">Farm Story</a>
+            <a href="pricing.html" class="text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 xl:px-3 py-2 rounded-lg header-nav-link whitespace-nowrap transition">Pricing</a>
+            <a href="blog.html" class="text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 xl:px-3 py-2 rounded-lg header-nav-link whitespace-nowrap transition">Blog</a>
+            <a href="contact.html" class="text-xs xl:text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 px-2 xl:px-3 py-2 rounded-lg header-nav-link whitespace-nowrap transition">Contact</a>
+          </div>
+
+          <!-- Header Right CTA: Subscriber Dashboard -->
+          <div class="hidden sm:flex items-center gap-3 flex-shrink-0">
+            <a href="dashboard.html" class="inline-flex items-center gap-2 px-3 xl:px-4 py-2 xl:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-extrabold shadow-lg shadow-blue-600/25 transition whitespace-nowrap">
+              <i class="fa-solid fa-gauge-high"></i>
+              <span>Subscriber Dashboard</span>
+>>>>>>> origin/main
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger Toggle -->
+          <div class="flex items-center lg:hidden gap-2 flex-shrink-0">
+<<<<<<< HEAD
+            <button class="theme-toggle-btn p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 sm:hidden" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+              <i class="theme-toggle-icon fa-solid fa-moon text-sm"></i>
+            </button>
+=======
+>>>>>>> origin/main
+            <button id="mobileMenuOpenBtn" class="p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Open Navigation Menu">
+              <i class="fa-solid fa-bars-staggered text-xl"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Header Spacer to prevent content from hiding behind fixed header -->
+  <div class="header-spacer" aria-hidden="true"></div>
+
+  <!-- MOBILE OFFCANVAS DRAWER -->
+  <div id="mobileMenuOverlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300 lg:hidden overlay-closed"></div>
+  <div id="mobileMenuDrawer" class="fixed top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-900 z-50 shadow-2xl p-6 overflow-y-auto transform translate-x-full transition-transform duration-300 lg:hidden drawer-closed">
+    <div class="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center">
+          <i class="fa-solid fa-cow"></i>
+        </div>
+        <span class="font-extrabold text-lg text-slate-900 dark:text-white">Daily<span class="text-blue-600">Product</span></span>
+      </div>
+      <button id="mobileMenuCloseBtn" class="p-2 text-slate-400 hover:text-slate-700 dark:hover:text-white" aria-label="Close Navigation Menu">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+    </div>
+
+    <div class="py-4 space-y-1 text-sm font-semibold">
+      <a href="index.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Home 1 (General)</a>
+      <a href="home-2.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Home 2 (Smart Dairy)</a>
+      <a href="about.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">About</a>
+      <a href="services.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Services</a>
+      <a href="service-details.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Service Details</a>
+      <a href="products.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Products Catalog</a>
+      <a href="subscriptions.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Subscriptions</a>
+      <a href="farm-story.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Farm Story</a>
+      <a href="pricing.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Pricing</a>
+      <a href="blog.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Blog & Stories</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold">Contact Us</a>
+    </div>
+
+    <div class="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-3">
+      <a href="dashboard.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-blue-600 text-white font-bold text-xs shadow-lg shadow-blue-600/20">
+        <i class="fa-solid fa-gauge-high"></i> Subscriber Dashboard
+      </a>
+      <a href="login.html" class="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs">
+        <i class="fa-solid fa-user"></i> Customer Login
+      </a>
+      <div class="flex items-center justify-center pt-2">
+        <button class="theme-toggle-btn w-full py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold flex items-center justify-center gap-2 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition">
+          <i class="theme-toggle-icon fa-solid fa-moon text-amber-500"></i> Toggle Dark / Light Theme
+        </button>
+      </div>
+      <div class="flex items-center justify-center">
+        <button class="rtl-toggle-btn w-full py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-bold flex items-center justify-center gap-2 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 transition">
+          <i class="fa-solid fa-right-left text-blue-500"></i> Switch Direction (<span class="rtl-btn-text">RTL</span>)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGISTER FORM CARD CONTAINER -->
+  <div class="w-full max-w-lg mx-auto my-auto py-8 px-4">
+    <div class="bg-white dark:bg-[#131c2e] rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-8">
+      
+      <!-- Brand Logo Header -->
+      <div class="text-center mb-6">
+        <a href="index.html" class="inline-flex items-center justify-center gap-2 mb-2">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-700 to-blue-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-blue-600/30">
+            <i class="fa-solid fa-cow"></i>
+          </div>
+        </a>
+        <h1 class="text-2xl font-black text-slate-900 dark:text-white">Start With a Free Trial Bottle</h1>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Get 1-Litre fresh farm milk delivered tomorrow morning at 6:00 AM</p>
+      </div>
+
+      <!-- Selected Plan & Pricing Summary Banner -->
+      <div id="registerPlanSummary" class="p-4 mb-5 rounded-2xl bg-blue-50/80 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 flex items-center justify-between gap-3 transition-all">
+        <div class="flex items-center gap-3 min-w-0">
+          <div id="registerPlanIcon" class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-base flex-shrink-0 shadow-sm shadow-blue-600/30">
+            <i class="fa-solid fa-cow"></i>
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-1.5 mb-0.5">
+              <span class="text-[9px] font-black uppercase tracking-wider text-blue-700 dark:text-blue-400">Selected Plan</span>
+              <span id="registerPlanBadge" class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-300">Active</span>
+            </div>
+            <h3 id="registerPlanTitle" class="text-sm font-extrabold text-slate-900 dark:text-white truncate">Family Double 2L</h3>
+            <p id="registerPlanFeatures" class="text-[11px] text-slate-500 dark:text-slate-400 truncate">2L Daily &bull; Weekly 500g Curd Jar &bull; Priority 6 AM</p>
+          </div>
+        </div>
+        <div class="text-right flex-shrink-0">
+          <div id="registerPlanPrice" class="text-lg font-black text-blue-600 dark:text-blue-400">$149</div>
+          <span id="registerPlanCycle" class="text-[10px] text-slate-400 font-medium block">/ month</span>
+        </div>
+      </div>
+
+      <!-- Registration Form -->
+      <form id="registerForm" action="dashboard.html" class="space-y-4">
+        <input type="hidden" id="selectedPlanInput" name="plan" value="family" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Your Full Name</label>
+            <input type="text" placeholder="Sarah Miller" required class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-xs font-semibold text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">WhatsApp / Phone</label>
+            <input type="tel" placeholder="+1 (555) 000-1122" required class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-xs font-semibold text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Email Address</label>
+          <input type="email" placeholder="sarah@example.com" required class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-xs font-semibold text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Doorstep Delivery Address</label>
+          <input type="text" placeholder="Apt 4B, 128 Maple Crescent, North Sector" required class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-xs font-semibold text-slate-900 dark:text-white focus:outline-none focus:border-blue-500" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Free Trial Milk Choice</label>
+            <select class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-xs font-semibold text-slate-900 dark:text-white focus:outline-none focus:border-blue-500">
+              <option>1L Raw A2 Desi Cow Milk</option>
+              <option>1L Pure Buffalo Milk</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-1">Morning Slot Preference</label>
+            <select class="w-full p-3 rounded-xl border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-xs font-semibold text-slate-900 dark:text-white focus:outline-none focus:border-blue-500">
+              <option>Early Slot (5:30 AM - 6:30 AM)</option>
+              <option>Standard Slot (6:30 AM - 7:30 AM)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-xs space-y-1">
+          <label class="flex items-center gap-2 cursor-pointer font-bold text-blue-900 dark:text-blue-300">
+            <input type="checkbox" checked required class="rounded border-blue-500 text-blue-600" />
+            <span>Include Free Insulated Porch Hanging Bag</span>
+          </label>
+          <p class="text-[10px] text-blue-700 dark:text-blue-400 pl-5">Our delivery rider will hook this onto your doorknob for insulated morning drops.</p>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs shadow-lg shadow-blue-600/30 transition flex items-center justify-center gap-2">
+          <span>Claim Free Bottle & Enter Dashboard</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </button>
+      </form>
+
+<<<<<<< HEAD
+      <!-- Social Logins Divider -->
+      <div class="relative my-5 text-center">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-slate-200 dark:border-slate-800"></div>
+        </div>
+        <div class="relative flex justify-center text-xs uppercase">
+          <span class="bg-white dark:bg-[#131c2e] px-3 text-slate-400 font-bold text-[10px] tracking-wider">Or continue with</span>
+        </div>
+      </div>
+
+      <!-- Social Logins: Google & Apple -->
+      <div class="grid grid-cols-2 gap-3">
+        <!-- Google Sign Up -->
+        <a href="dashboard.html" class="flex items-center justify-center gap-2.5 py-2.5 px-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/60 dark:bg-slate-800/60 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-200 transition shadow-sm group">
+          <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.78-2.1-6.73-4.94H1.24v3.13C3.26 21.36 7.34 24 12 24z"/>
+            <path fill="#FBBC05" d="M5.27 14.26c-.25-.72-.38-1.49-.38-2.26s.13-1.54.38-2.26V6.61H1.24C.45 8.18 0 9.99 0 12s.45 3.82 1.24 5.39l4.03-3.13z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.24 6.61l4.03 3.13c.95-2.84 3.61-4.99 6.73-4.99z"/>
+          </svg>
+          <span>Google</span>
+        </a>
+
+        <!-- Apple Sign Up -->
+        <a href="dashboard.html" class="flex items-center justify-center gap-2.5 py-2.5 px-3 rounded-xl bg-black dark:bg-white text-white dark:text-black hover:bg-slate-800 dark:hover:bg-slate-100 text-xs font-bold transition shadow-sm group">
+          <i class="fa-brands fa-apple text-base flex-shrink-0"></i>
+          <span>Apple</span>
+        </a>
+      </div>
+
+=======
+>>>>>>> origin/main
+      <!-- Existing Account -->
+      <div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800 text-center">
+        <p class="text-xs text-slate-500">
+          Already a subscriber? 
+          <a href="login.html" class="font-bold text-blue-600 dark:text-blue-400 hover:underline ml-1">
+            Sign In Here &rarr;
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- AUTH FOOTER -->
+<<<<<<< HEAD
+  <div class="w-full text-center py-6 text-xs text-slate-400">
+    <div class="max-w-lg mx-auto mb-3 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs px-4">
+      <span class="inline-flex items-center gap-1.5">
+        <i class="fa-solid fa-truck-fast text-blue-500"></i> Morning Delivery Window: <strong class="text-slate-700 dark:text-slate-200">5:30 AM – 7:30 AM</strong>
+      </span>
+      <span class="text-slate-300 dark:text-slate-700">|</span>
+      <span class="inline-flex items-center gap-1.5">
+        <i class="fa-solid fa-phone-volume text-blue-500"></i> Pure Milk Hotline: <a href="tel:+18004566455" class="text-blue-600 dark:text-blue-400 font-bold hover:underline">+1 (800) 456-MILK</a>
+      </span>
+    </div>
+=======
+  <div class="w-full text-center py-4 text-[11px] text-slate-400">
+>>>>>>> origin/main
+    <p>&copy; 2026 Daily Product Dairy Farm Inc. &bull; 100% Organic Certified &bull; No Payment Info Required For Trial</p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
