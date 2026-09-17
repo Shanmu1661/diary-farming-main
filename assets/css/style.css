@@ -428,26 +428,31 @@ html[dir="rtl"] #mobileMenuDrawer.drawer-closed {
    Fixed Header & Dynamic Spacer System
    ========================================================================== */
 :root {
-<<<<<<< HEAD
-  --header-height: 65px;
-=======
-  --header-height: 121px;
->>>>>>> origin/main
+  --header-height: 80px;
 }
 
 @media (max-width: 768px) {
   :root {
-<<<<<<< HEAD
-    --header-height: 65px;
-=======
-    --header-height: 147px;
->>>>>>> origin/main
+    --header-height: 80px;
   }
 }
 
-/* Nav Links Nowrap to prevent wrapping on mid-tier viewports */
+/* Nav Links Nowrap & Flex-nowrap to guarantee single-line navbar */
+#mainNavbar .flex {
+  flex-wrap: nowrap;
+}
+
 .header-nav-link {
   white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #mainNavbar .header-nav-link {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+    font-size: 0.75rem;
+  }
 }
 
 /* Content offset spacer */
